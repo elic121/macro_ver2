@@ -6,19 +6,19 @@ import time
 import sys
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
-try:
-    import cv2
-except:
-    subprocess.check_call([sys.executable, '-m', 'pip',
-                          'install', '--upgrade', 'opencv-python'])
-    import cv2
+# try:
+#     import cv2
+# except:
+#     subprocess.check_call([sys.executable, '-m', 'pip',
+#                           'install', '--upgrade', 'opencv-python','-q'])
+#     import cv2
 
-try:
-    import urllib.request
-except:
-    subprocess.check_call([sys.executable, '-m', 'pip',
-                          'install', '--upgrade', 'urllib.request'])
-    import urllib.request
+# try:
+#     import urllib.request
+# except:
+#     subprocess.check_call([sys.executable, '-m', 'pip',
+#                           'install', '--upgrade', 'urllib.request','-q'])
+#     import urllib.request
 
 try:
     from tensorflow.keras import layers
@@ -26,7 +26,7 @@ try:
     import tensorflow as tf
 except:
     subprocess.check_call([sys.executable, '-m', 'pip',
-                          'install', '--upgrade', 'tensorflow'])
+                          'install', '--upgrade', 'tensorflow','-q'])
     from tensorflow.keras import layers
     from tensorflow import keras
     import tensorflow as tf
